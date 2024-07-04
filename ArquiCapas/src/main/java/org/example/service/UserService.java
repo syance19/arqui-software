@@ -18,5 +18,7 @@ public class UserService {
         userRepository.saveUser(user);
     }
 
-    public void deleteUser(){userRepository.deleteUser();}
+    public boolean deleteUser(String userId) {
+        return userRepository.deleteUser(userId);
+    }
 }

@@ -3,20 +3,69 @@ package org.example;
 import org.example.controller.UserController;
 import org.example.model.User;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         UserController userController = new UserController();
+        Scanner scanner = new Scanner(System.in);
 
-        // Create a new user
-        User newUser = new User("1", "", "john.doe@example.com");
-        userController.saveUser(newUser);
+        while (true) {
+            System.out.println("1. Agregar Usuario");
+            System.out.println("2. Obtener Usuario");
+            System.out.println("3. Eliminar Usuario");
+            System.out.println("4. Salir");
+            System.out.print("Ingresa tu opción: ");
+            String choice = scanner.nextLine();
 
-        // Retrieve the user
-        User retrievedUser = userController.getUserById("1");
-        System.out.println("Retrieved User: " + retrievedUser.getName() + ", " + retrievedUser.getEmail());
+            switch (choice) {
+                case "1":
+                    System.out.print("Ingresa el ID del usuario: ");
+                    String userId = scanner.nextLine();
+                    System.out.print("Ingresa el nombre: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Ingresa el correo: ");
+                    String email = scanner.nextLine();
+                    User newUser = new User(userId, name, email);
+                    userController.saveUser(newUser);
+                    System.out.println("¡Usuario agregado exitosamente!");
+                    break;
 
+                case "2":
+                    System.out.print("Ingresa el ID del usuario: ");
+                    String searchId = scanner.nextLine();
+                    User foundUser = userController.getUserById(searchId);
+                    if (foundUser != null) {
+                        System.out.println("ID del Usuario: " + foundUser.getId() +
+                                ", Nombre: " + foundUser.getName() +
+                                ", Correo: " + foundUser.getEmail());
+                    } else {
+                        System.out.println("Usuario no encontrado.");
+                    }
+                    break;
 
+                case "3":
+                    System.out.print("Ingresa el ID del usuario: ");
+                    String deleteId = scanner.nextLine();
+                    if (userController.deleteUser(deleteId)) {
+                        System.out.println("¡Usuario eliminado exitosamente!");
+                    } else {
+                        System.out.println("Usuario no encontrado.");
+                    }
+                    break;
 
+                case "4":
+                    System.out.println("Saliendo del programa.");
+                    scanner.close();
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opción inválida. Por favor, intenta nuevamente.");
+            }
+        }
     }
+
 }
+
 

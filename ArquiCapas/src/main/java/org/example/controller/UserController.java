@@ -18,5 +18,7 @@ public class UserController {
         userService.saveUser(user);
     }
 
-    public void deleteUser(){userService.deleteUser();}
+    public boolean deleteUser(String userId){ userService.deleteUser(userId);
+        return true;
+    }
 }

@@ -14,7 +14,7 @@ public class UserRepository {
 
     public void saveUser(User user) {userDatabase.put(user.getId(), user);}
 
-    public void deleteUser(){
-        userDatabase.clear();
+    public boolean deleteUser(String userId) {
+        return userDatabase.remove(userId) != null;
     }
 }

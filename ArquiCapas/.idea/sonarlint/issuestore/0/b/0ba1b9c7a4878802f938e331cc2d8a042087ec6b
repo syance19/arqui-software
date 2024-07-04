@@ -1,2 +1,20 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(ê•ÈÑ8ëÿ²Ù…2
+~
+java:S1192"\Define a constant instead of duplicating this literal "Ingresa el ID del usuario: " 3 times.(¾§®Ÿıÿÿÿÿ8É’åø‡2
+G	java:S106"+Replace this use of System.out by a logger.(Æğ”â8×’åø‡2
+L	java:S106"+Replace this use of System.out by a logger.(¦†¨óıÿÿÿÿ8Ø’åø‡2
+F	java:S106"+Replace this use of System.out by a logger.(ùÖµz8Ù’åø‡2
+L	java:S106"+Replace this use of System.out by a logger.(òÛÖ™ùÿÿÿÿ8Ù’åø‡2
+F	java:S106"+Replace this use of System.out by a logger.(—•Ù,8Ù’åø‡2
+L	java:S106"+Replace this use of System.out by a logger.(¾§®Ÿıÿÿÿÿ8Û’åø‡2
+G	java:S106"+Replace this use of System.out by a logger.(¡‘Å8Ü’åø‡2
+L	java:S106"+Replace this use of System.out by a logger.(Õ¥Š’ûÿÿÿÿ8İ’åø‡2
+L	java:S106"+Replace this use of System.out by a logger.(Æ«ÿ†üÿÿÿÿ8Ş’åø‡2
+L	java:S106#"+Replace this use of System.out by a logger.(¾§®Ÿıÿÿÿÿ8Ş’åø‡2
+L	java:S106'"+Replace this use of System.out by a logger.(±ïõÌıÿÿÿÿ8ß’åø‡2
+L	java:S106+"+Replace this use of System.out by a logger.(á¨ò¨üÿÿÿÿ8à’åø‡2
+L	java:S1060"+Replace this use of System.out by a logger.(¾§®Ÿıÿÿÿÿ8á’åø‡2
+L	java:S1063"+Replace this use of System.out by a logger.(¤Ù›»úÿÿÿÿ8â’åø‡2
+L	java:S1065"+Replace this use of System.out by a logger.(á¨ò¨üÿÿÿÿ8ã’åø‡2
+L	java:S106:"+Replace this use of System.out by a logger.(ô±Èıÿÿÿÿ8ã’åø‡2
+L	java:S106@"+Replace this use of System.out by a logger.(à±·Ùûÿÿÿÿ8ä’åø‡2
