@@ -3,6 +3,8 @@ package org.example.controller;
 import org.example.model.User;
 import org.example.service.UserService;
 
+import java.util.regex.Pattern;
+
 public class UserController {
     private UserService userService;
 
@@ -20,5 +22,9 @@ public class UserController {
 
     public boolean deleteUser(String userId){ userService.deleteUser(userId);
         return true;
+    }
+    public boolean isValidEmail(String email) {
+        String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        return Pattern.matches(emailRegex, email);
     }
 }

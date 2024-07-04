@@ -4,8 +4,13 @@ import org.example.controller.UserController;
 import org.example.model.User;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
+
 
 public class Main {
+
+
+
     public static void main(String[] args) {
         UserController userController = new UserController();
         Scanner scanner = new Scanner(System.in);
@@ -24,8 +29,16 @@ public class Main {
                     String userId = scanner.nextLine();
                     System.out.print("Ingresa el nombre: ");
                     String name = scanner.nextLine();
+                    while (name.isEmpty()) {
+                        System.out.println("El nombre no puede estar vacío. Ingresa nuevamente: ");
+                        name = scanner.nextLine();
+                    }
                     System.out.print("Ingresa el correo: ");
                     String email = scanner.nextLine();
+                    while (email.isEmpty() || !userController.isValidEmail(email)) {
+                        System.out.println("El correo no puede estar vacío y debe ser válido contener el @.com. Ingresa nuevamente: ");
+                        email = scanner.nextLine();
+                    }
                     User newUser = new User(userId, name, email);
                     userController.saveUser(newUser);
                     System.out.println("¡Usuario agregado exitosamente!");
