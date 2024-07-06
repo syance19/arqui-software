@@ -38,6 +38,7 @@ public class Main {
                     while (email.isEmpty() || !userController.isValidEmail(email)) {
                         System.out.println("El correo no puede estar vacío y debe ser válido contener el @.com. Ingresa nuevamente: ");
                         email = scanner.nextLine();
+
                     }
                     User newUser = new User(userId, name, email);
                     userController.saveUser(newUser);
