@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.server.Server;
-import com.example.client.Client;
+import org.example.client.Client;
 
 import java.io.IOException;
 
